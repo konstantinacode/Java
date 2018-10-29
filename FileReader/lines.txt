@@ -1,0 +1,30 @@
+Product
+{
+	Item  CD
+	Name The River    
+	Artist Bruce Springsteen
+	Number of Trucks  11
+	Time 76
+	Price 22.5  
+}
+
+
+Product
+{
+	Item  CD
+	Name Stars    
+	Artist Simply Red
+	Number of Trucks 12
+	Time 98
+	Price 35.85  
+}
+
+Product
+{
+	Item  CD
+	Name Catch the Rainbow   
+	Artist Rainbow
+	Number of Trucks  9
+	Time 129
+	Price 24.8 
+}
