@@ -1,0 +1,65 @@
+Product
+{
+	Item CD 
+	Title Four
+	Artist Led Zeppelin
+	Number of trucks 6
+	Playing time 55
+	Price 24.55
+}
+Product
+{
+	Item DVD 
+	Title Match Point 
+	Director woody allen
+	Star Jonathan Rhys Meyers
+	Playing time 90
+	Price 35.7
+}
+Product
+{
+	Item DVD 
+	Title Anna Karenina 
+	Director Joe Wright
+	Star Keira Christina Knightley 
+	Playing time 115
+	Price 34.68
+}
+Product
+{
+	Item CD 
+	Title the wall
+	Artist pink floyd
+	Number of trucks 6
+	Playing time 115
+	Price 45.9
+}
+Product
+{
+	Item CD 
+	Title catch the rainbow
+	Artist rainbow
+	Number of trucks 12
+	Playing time 89
+	Price 25.5
+}
+Product
+{
+	Item CD 
+	Title The River
+	Artist Bruce Springsteen
+	Number of trucks 14
+	Playing time 111
+	Price 22.5
+}
+Product
+{
+	Item DVD 
+	Title Les Miserables 
+	Director Ton Hooper
+	Star Anne Hathaway
+	Playing time 135
+	Price 33.9
+}
+Number of Cd's  4
+Number of DVD's 3
