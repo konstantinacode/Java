@@ -1,0 +1,20 @@
+To generate javadoc from command line, go to directory where java source files are located and then run 
+
+Windows: 
+> "full_path_to\javadoc.exe" -package -d location_of_doc_directory *.java
+
+Linux/Unix:
+$ javadoc -package -d location_of_doc_directory *.java
+
+For example the command
+$ javadoc -package -d ../doc *.java
+
+will generate documentation in directory ../doc
+
+Description of options:
+-package: generate documentation for package/protected/public classes and members. Class ListNode is package protected (not public).
+-d directory where doc will be generated.
+
+For more information you may run 
+Linux: "javadoc --help" or "man javadoc" 
+Windows: "full_path_to\javadoc.exe" --help
