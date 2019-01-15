@@ -60,6 +60,22 @@ public class List {
 	 * @return true if the list contains the data, false otherwise
 	 */
 	public boolean contains(Object data) {
+		if (isEmpty()) {
+			return false;
+		}
+		
+		ListNode cursor = firstNode;
+		boolean found = false;
+		while(cursor != null){
+			if(cursor.getObject().equals(data)){
+				found = true;
+				break;
+			}else{
+				cursor = cursor.nextNode;
+			}
+		}
+		
+		return found;
 	}
 
 	/**
@@ -68,14 +84,38 @@ public class List {
 	 * @return true if the data was removed, false in the item is not present in the list
 	 */
 	public boolean remove(Object data) {
+		if(isEmpty()){
+			return false;
+		}
 		
 		//iterate list nodes until reach the node that contains the data
 		ListNode cursor = firstNode;
 		ListNode previous = null;
+		while(cursor != null){
+			if(cursor.getObject().equals(data)){
+				//first occurrence of the data found
+				break;
+			}
+			
+			//proceed previous and cursor
+			previous = cursor;
+			cursor = cursor.nextNode;
+		}
 		
 		//if data not found
+		if(cursor == null){
+			return false;
+		}
 		
 		//remove node
+		if(cursor == firstNode){
+			removeFromFront();
+		}else if(cursor == lastNode){
+			removeFromBack();
+		}else{
+			previous.nextNode = cursor.nextNode;
+		}
+		return true;
 	}
 
 	/**
