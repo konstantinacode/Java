@@ -27,9 +27,27 @@ public class HashTable {
 	 */
 	public boolean add(Object data) {
 		// hash data
+		int hash = data.hashCode();
+
 		// compress address
+		int address = hash % array.length;
+
+		List chain = array[address];
+		
 		// check if list is initialized		
+		if (chain == null) {
+			chain = new List();
+			array[address] = chain;
+		}
+
 		// add data if not present in list
+		if (!chain.contains(data)) {
+			chain.insertAtFront(data);
+			size++;
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -39,9 +57,24 @@ public class HashTable {
 	 */
 	public boolean remove(Object data) {
 		// hash data
+		int hash = data.hashCode();
+
 		// compress address
+		int address = hash % array.length;
+
+		List chain = array[address];
 		// check if data is in list
+		if (chain == null) {
+			return false;
+		}
+		
 		//remove data from list
+		boolean removed = chain.remove(data); 
+		if(removed){
+			size--;
+		}
+
+		return removed;
 	}
 
 	/**
@@ -51,8 +84,18 @@ public class HashTable {
 	 */
 	public boolean contains(Object data) {
 		// hash data
+		int hash = data.hashCode();
+
 		// compress address
+		int address = hash % array.length;
+
 		// check if data is in list
+		List chain = array[address];
+		if (chain == null) {
+			return false;
+		} else {
+			return chain.contains(data);
+		}
 	}
 
 	/**
